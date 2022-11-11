@@ -1,4 +1,4 @@
-var fileName = "../a.mkv"
+var fileName = "/a.mkv"
 var progress = document.getElementById("progress");
 var progressText = document.getElementById("progress-text");
 
