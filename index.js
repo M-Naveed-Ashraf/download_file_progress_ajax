@@ -1,4 +1,4 @@
-var fileName = "/a.mkv"
+var fileName = "a.mkv"
 var progress = document.getElementById("progress");
 var progressText = document.getElementById("progress-text");
 
@@ -37,6 +37,10 @@ function download() {
 
         var percent_complete = (e.loaded / e.total) * 100;
         percent_complete = Math.floor(percent_complete);
+
+        if(percent_complete === 100){
+            endBtnLoader();
+        }
 
         var duration = ( new Date().getTime() - startTime ) / 1000;
         var bps = e.loaded / duration;
