@@ -1,10 +1,19 @@
-var fileName = "a.mkv"
+var fileName = "../a.mkv"
 var progress = document.getElementById("progress");
 var progressText = document.getElementById("progress-text");
 
 var downloadProgressText = document.getElementById("download-progress-text");
+const btn = document.getElementById("download-button");
+
+function startBtnLoader() {
+  btn.classList.add("button--loading");
+}
+function endBtnLoader() {
+  btn.classList.remove("button--loading");
+}
 
 function download() {
+    startBtnLoader();
     var startTime = new Date().getTime();
     //// previous code in download button click listener
     request = new XMLHttpRequest();

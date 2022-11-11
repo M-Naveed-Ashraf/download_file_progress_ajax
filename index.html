@@ -4,14 +4,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
 <body>
-    <button onclick="download()" id="download-button">Download</button>
+    <div>
+        <button onclick="download()" class="button" id="download-button"><span class="button__text">download</span></button>
+        
+        <a id="save-file">Save File</a>
+    </div>
     
-    <a id="save-file">Save File</a>
-    
-    <progress id="progress" value="0" aria-valuemax="100"></progress>
+    <div>
+        <progress id="progress" value="0" aria-valuemax="100"></progress>
+    </div>
     <span id="progress-text"></span>
     <span id="download-progress-text"></span>
     
